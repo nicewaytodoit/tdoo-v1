@@ -25,7 +25,6 @@ const todoList = (props) => {
                         doneEdit={props.doneEdit}
                         cancelEdit={props.cancelEdit}
                         todoCompleted={props.todoCompleted}
-
                     />
                 })}
             </ul>
