@@ -1,26 +1,20 @@
 import { put } from 'redux-saga/effects';
 
-import * as actions from '../actions/index';
+import * as actions from '../actions';
 import axios from '../helpers/axios-wrapper';
 
 
 
-export function* fetchItemsSaga(action) {
-    yield put(actions.fetchOrdersStart());
-    const queryParams = '?auth=' + action.token + '&orderBy="userId"&equalTo="' + action.userId + '"';
+export function* fetchItemsSaga() {
+    yield put(actions.itemActions.taskFetchStart());
     try {
-        const res = yield axios.get('/items.json' + queryParams);
-        const itemsData = [];
-        for (let key in res.data) {
-            itemsData.push({
-                ...res.data[key],
-                id: key
-            });
-        }
-        yield put(actions.fetchOrdersSuccess(itemsData));
+        const res = yield axios.get('/cake.json');
+        const { data } = res; 
+        const itemList = Object.keys(data).map((item) => ({ name: item, value: data[item] }));
+        yield put(actions.itemActions.taskFetchSuccess(itemList));
     }
     catch (error) {
-        yield put(actions.fetchOrdersFail(error));
+        yield put(actions.itemActions.taskFetchFail(error));
     }
 }
 

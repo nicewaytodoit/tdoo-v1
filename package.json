@@ -4,16 +4,37 @@
   "private": true,
   "homepage": "http://www.tdoo.co.uk/tdoo-v0",
   "dependencies": {
+    "@types/jest": "^23.3.10",
+    "@types/node": "^10.12.15",
+    "@types/react": "^16.7.17",
+    "@types/react-dom": "^16.0.11",
+    "axios": "^0.18.0",
     "react": "^16.7.0-alpha.2",
     "react-dom": "^16.7.0-alpha.2",
+    "react-redux": "^6.0.0",
     "react-scripts": "2.1.1",
     "react-validation": "^3.0.7",
-    "redux-saga": "^0.16.2"
+    "redux": "^4.0.1",
+    "redux-saga": "^0.16.2",
+    "ts-node": "^7.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
+    "build:app": "SET APPLICATION_URL=$API_URL&& react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "redux-devtools-extension": "^2.13.7",
+    "source-map-loader": "^0.2.4",
+    "typescript": "^3.2.2"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

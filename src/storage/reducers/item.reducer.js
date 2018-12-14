@@ -1,27 +1,8 @@
-import * as actionTypes from '../actions/action-types/action-types';
+import * as actionTypes from '../actions/action-types/item.action-type';
 
 // In TypeScript this could be interface emposing types 
 const initialItemState = {
-    tasks: [
-        {
-            id: 1,
-            name: "Buy groceries",
-            date: Date.now(),
-            done: false,
-        },
-        {
-            id: 2,
-            name: "Single Rows with [done]",
-            date: Date.now(),
-            done: false,
-        },
-        {
-            id: 3,
-            name: "Cross and make it better",
-            date: Date.now(),
-            done: false,
-        },
-    ],
+    tasks: [],
     error: null
 }
 

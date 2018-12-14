@@ -1,4 +1,4 @@
-import * as actionTypes from './action-types/action-types';
+import * as actionTypes from './action-types/item.action-type';
 
 export const taskFetchStart = () => {
     return {
