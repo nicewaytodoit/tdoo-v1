@@ -4,6 +4,7 @@ import * as actions from '../actions';
 import axios from '../helpers/axios-wrapper';
 
 
+// {id: 1, title: "teset", completed: false, date: "2018-11-04T22:20:11.441Z"}
 
 export function* fetchItemsSaga() {
     yield put(actions.itemActions.taskFetchStart());

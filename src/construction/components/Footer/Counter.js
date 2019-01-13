@@ -1,6 +1,6 @@
 import React from 'react';
 import './Counter.css';
-import { pluralize } from '../../shared/filters';
+import { pluralize } from '../../../shared/filters';
 
 const counter = (props) => {
     return (

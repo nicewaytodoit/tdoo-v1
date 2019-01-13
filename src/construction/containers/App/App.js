@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
 import './App.css';
-import Header from '../../components/Header';
-import NewTodo from '../../components/NewTodo';
-import TodoList from '../../components/TodoList/TodoList';
-import Footer from '../../components/Footer/Footer';
-import * as filters from '../../shared/filters';
-import * as tdooStorage from '../../shared/localStorage';
+import Header from '../../../construction/components/Header/Header';
+import NewTodo from '../../../construction/components/NewTodo';
+import TodoList from '../../../construction/components/TodoList/TodoList';
+import Footer from '../../../construction/components/Footer/Footer';
+import * as filters from '../../../shared/filters';
+import * as tdooStorage from '../../../shared/localStorage';
 
 // const item = { id: 6, title: "test", completed: false, date: new Date() }
 
@@ -20,6 +20,8 @@ class App extends Component {
     uid: 0,
     beforeEditCache: ''
   }
+
+  windowsEventHash = (e) => this.onHashChange();
 
   filteredTodos = () => filters[this.state.visibility](this.state.todos);
   remaining = () => filters.active(this.state.todos).length;
@@ -53,11 +55,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener("hashchange", (e) => this.onHashChange());
+    window.addEventListener("hashchange", this.windowsEventHash);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("hashchange");
+    window.removeEventListener("hashchange", this.windowsEventHash);
   }
 
   saveTodos = (todosModified) => {

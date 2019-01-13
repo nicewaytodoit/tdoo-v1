@@ -1,0 +1,9 @@
+button {
+    background-color: gray;
+    color: black;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 0 5px;
+    width: 80px;
+    display: block;
+}
