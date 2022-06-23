@@ -43,7 +43,7 @@
     "jasmine-enzyme": "^7.1.2",
     "jest": "^26.0.1",
     "jest-cli": "^26.0.1",
-    "jsdom": "^16.2.2",
+    "jsdom": "^16.5.0",
     "react-test-renderer": "^16.13.1",
     "redux-devtools-extension": "^2.13.8",
     "source-map-loader": "^1.0.0",
